@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+.aa {
+    font-family: 'Noto Sans KR', 'Roboto';
+}
+
+
+.bb {
+    font-family: 'EB Garamond', serif;
+    font-family: 'Noto Serif KR', serif;
+}
+
+
+
+* {
+    outline: 1px solid #363;
+}
+
+/* {header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    padding: 27.5px 0;
+    background: #fff;
+
+    z-index: 999;
+}
+
+#header .inner {
+    position: relative;
+    width: 1800px;
+    height: 45px;
+    margin: 0 auto;
+
+    color: #666;
+}
+
+#header .inner h1 {
+    text-align: center;
+    font-size: 0;
+}
+
+#header .inner .gnb {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+#header .inner .gnb ul {
+    display: flex;
+    gap: 30px;
+    line-height: 45px;
+}
+
+#header .inner .gnb ul>li {
+    position: relative;
+}
+
+#header .inner .gnb ul>li>a {
+    display: block;
+}
+
+#header .inner .gnb ul>li>a>i {
+    font-size: 23px;
+    line-height: 45px;
+}
+
+#header .inner .gnb .left ul>li:nth-child(n+3)::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+
+#header .inner .gnb .right ul>li:nth-last-child(n+3)::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -15px;
+    transform: translate(0, -50%);
+    width: 1px;
+    height: 12px;
+    background: #ddd;
+}
+
+#header .inner .gnb ul>li>a:hover {
+    color: #333;
+    font-weight: 500;
+}
+
+/* header} */
+
+/* {mainVisual */
+#mainVisual .mainSlide {
+    width: 1800px;
+    height: 100vh;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+#mainVisual .mainSlide figure {
+    position: relative;
+
+}
+
+#mainVisual .mainSlide img {
+    width: 100%;
+    height: 100%;
+}
+
+#mainVisual .mainSlide .inner {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1400px;
+
+    color: #fff;
+}
+
+#mainVisual .mainSlide .inner span {
+    display: inline-block;
+    font-size: 25px;
+    margin: 0 0 40px 0;
+}
+
+#mainVisual .mainSlide .inner h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 55px;
+    letter-spacing: 4px;
+}
+
+#mainVisual .main_dots {
+    position: absolute;
+    bottom: 59px;
+    right: 60px;
+    /* transform: translate(-50%, -100%); */
+    display: flex;
+    justify-content: space-between;
+
+
+    background: #fff;
+    width: 900px;
+    padding: 40px 80px;
+}
+
+#mainVisual .main_dots li {
+    position: relative;
+    width: 200px;
+    color: #888;
+    opacity: 0.7;
+}
+
+#mainVisual .main_dots li~li::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 60px;
+    background: #ddd;
+    top: 50%;
+    left: -34px;
+    transform: translate(-50%, -50%);
+
+}
+
+#mainVisual .main_dots li>span {
+    display: block;
+}
+
+#mainVisual .main_dots li>strong {
+    padding: 20px 0 0 0;
+    display: block;
+    line-height: 18px;
+}
+
+#mainVisual .main_dots li.on {
+    opacity: 1;
+}
+
+#mainVisual .main_dots li.on>span {
+    color: #c9ab81;
+}
+
+#mainVisual .main_dots li.on>strong {
+    color: #333;
+}
+
+/* mainVisual} */
+
+/* {mainBestArt */
+#mainBestArt {
+    padding: 100px 0;
+}
+
+#mainBestArt .inner {
+    width: 1400px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+#mainBestArt .inner .intro {
+    text-align: center;
+}
+
+#mainBestArt .inner .intro span {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    color: #c9ab81;
+
+    margin: 0 0 20px 0;
+
+}
+
+#mainBestArt .inner .intro h2 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+    margin: 0 0 80px 0;
+}
+
+#mainBestArt .inner .intro h2::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 1px;
+    top: 50%;
+    left: 20%;
+    background: #555;
+}
+
+#mainBestArt .inner .intro h2::after {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 1px;
+    top: 50%;
+    right: 20%;
+    background: #555;
+}
+
+#mainBestArt .inner .artslide {
+    margin: 0 -15px;
+}
+
+#mainBestArt .inner .artslide figure {
+    padding: 0 15px;
+}
+
+#mainBestArt .inner .artslide figure img {
+    width: 100%;
+    height: 400px;
+
+    margin: 0 0 30px 0;
+}
+
+#mainBestArt .inner .artslide figure a {
+    display: block;
+    font-size: 25px;
+}
