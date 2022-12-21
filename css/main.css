@@ -266,7 +266,7 @@
 }
 
 #mainBestArt .inner .artslide {
-    margin: 0 -15px 15px -15px;
+    margin: 0 -15px 55px -15px;
 }
 
 #mainBestArt .inner .artslide figure {
@@ -277,7 +277,7 @@
     width: 100%;
     height: 400px;
 
-    margin: 0 0 30px 0;
+    margin: 0 0 25px 0;
 }
 
 #mainBestArt .inner .artslide figure a {
@@ -286,11 +286,12 @@
 }
 
 #mainBestArt .inner .artslide figure .txt {
-    margin: 0 0 30px 0;
+    margin: 0 0 25px 0;
 }
 
 #mainBestArt .inner .artslide figure .desc {
-    margin: 0 0 30px 0;
+    margin: 0 0 25px 0;
+    line-height: 25px;
 }
 
 #mainBestArt .inner .artslide figure .desc span {
@@ -311,11 +312,9 @@
 
 #mainBestArt .inner .artslide .slick-dots {
     position: absolute;
-    bottom: -10px;
+    bottom: -50px;
     left: 48%;
     font-size: 0;
-
-    overflow: visible;
 }
 
 #mainBestArt .inner .artslide .slick-dots>li {
@@ -353,10 +352,219 @@
     position: relative;
 }
 
-#mainBestArt .slideArrow i:nth-child(1) {
+
+#mainBestArt .slideArrow li:nth-child(1) {
     position: absolute;
-    left: 50%;
     top: 50%;
+    left: 50%;
     margin: 0 0 0 -800px;
-    font-size: 100px;
+}
+
+#mainBestArt .slideArrow li:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin: 0 -800px 0 0;
+}
+
+#mainBestArt .slideArrow button {
+    font-size: 40px;
+    border: none;
+    background: transparent;
+}
+
+#mainBestArt .slideArrow li {
+    color: #666;
+}
+
+#mainBestArt .slideArrow li.on {
+    color: #ddd;
+}
+
+/* mainBestArt} */
+
+/* {mainMD */
+#mainMD {
+    padding: 100px 0;
+    margin: 0 50px;
+    background: url(../img/pick-bg.jpg) no-repeat center center/cover;
+}
+
+#mainMD .inner {
+    width: 1400px;
+    margin: 0 auto;
+
+}
+
+#mainMD .inner .intro {
+    text-align: center;
+}
+
+#mainMD .inner .intro span {
+    display: block;
+    font-size: 20px;
+    line-height: 20px;
+    color: #c9ab81;
+
+    margin: 0 0 20px 0;
+
+}
+
+#mainMD .inner .intro h2 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 500;
+    letter-spacing: 5px;
+
+    margin: 0 0 40px 0;
+}
+
+#mainMD .inner .intro h2::before {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 1px;
+    top: 50%;
+    left: 20%;
+    background: #555;
+}
+
+#mainMD .inner .intro h2::after {
+    position: absolute;
+    content: "";
+    width: 200px;
+    height: 1px;
+    top: 50%;
+    right: 20%;
+    background: #555;
+}
+
+#mainMD .inner .tabs_wrap .tab_manu {
+    display: flex;
+    gap: 30px;
+    margin: 0 0 40px 590px;
+}
+
+#mainMD .inner .tabs_wrap .tab_manu li {
+    position: relative;
+    font-size: 18px;
+    color: #666666;
+}
+
+#mainMD .inner .tabs_wrap .tab_manu li.on button {
+    color: #333;
+    font-weight: 500;
+}
+
+#mainMD .inner .tabs_wrap .tab_manu li~li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -13px;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 12px;
+    background: #dddddd;
+}
+
+
+#mainMD .inner .tabs_wrap .tab_manu button {
+    border: none;
+    background: transparent;
+
+}
+
+#mainMD .inner .tabs_wrap .content>div {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+}
+
+#mainMD .inner .tabs_wrap .content>div.on {
+    visibility: visible;
+    height: auto;
+}
+
+#mainMD .inner .tabs_wrap .content {
+    background: #fff;
+}
+
+#mainMD .inner .tabs_wrap .content figure {
+    display: flex;
+}
+
+#mainMD .inner .tabs_wrap .content .left {
+    width: 640px;
+    height: 500px;
+}
+
+#mainMD .inner .tabs_wrap .content .left img {
+    width: 100%;
+    height: 100%;
+}
+
+#mainMD .inner .tabs_wrap .content .right {
+    width: 640px;
+    height: 500px;
+    margin: 0 0 0 80px;
+    padding: 100px 0 0 0;
+}
+
+#mainMD .inner .tabs_wrap .content .right span {
+    display: inline-block;
+    color: #c9ab81;
+    margin: 0 0 20px 0;
+}
+
+#mainMD .inner .tabs_wrap .content .right dt {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333333;
+    margin: 0 0 30px 0;
+}
+
+#mainMD .inner .tabs_wrap .content .right dd {
+    font-family: 'Noto Sans KR', 'Roboto';
+    color: #666666;
+    margin: 0 0 50px 0;
+    line-height: 20px;
+}
+
+#mainMD .inner .tabs_wrap .content .right a {
+    border: 1px solid #c9ab81;
+    padding: 10px 40px;
+}
+
+#mainMD {
+    position: relative;
+}
+
+
+#mainMD .slide_arrow li:nth-child(1) {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin: 0 0 0 -800px;
+}
+
+#mainMD .slide_arrow li:nth-child(2) {
+    position: absolute;
+    top: 55%;
+    right: 50%;
+    margin: 0 -800px 0 0;
+}
+
+#mainMD .slide_arrow button {
+    font-size: 60px;
+    border: none;
+    background: transparent;
+}
+
+#mainMD .slide_arrow li {
+    color: #666;
+}
+
+#mainMD .slide_arrow li.on {
+
+    color: #ddd;
 }

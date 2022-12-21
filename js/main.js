@@ -38,10 +38,59 @@ $(function () {
         slidesToScroll: 1,
         swipeToSlide: true,
         infinite: false,
+        arrows: false,
     });
 
 
-    $('#mainBestArt .slideArrow i:nth-child(1)').on('click', function () {
+    $('#mainBestArt .slideArrow li:nth-child(1)').on('click', function () {
         $('.artslide').slick('slickPrev')
+
     })
+
+    $('#mainBestArt .slideArrow li:nth-child(2)').on('click', function () {
+        $('.artslide').slick('slickNext')
+    })
+
+
+    $('#mainBestArt .slideArrow button').on('click', function () {
+        $('#mainBestArt .slideArrow li').removeClass('on')
+        $(this).parent().addClass('on');
+    });
+
+
+
+
+    $('#mainMD .inner .content .slide').slick({
+        arrows: false,
+        infinite: false,
+    })
+
+    $('#mainMD .inner .tab_manu>li').on('click', function () {
+        var idx = $(this).index();
+        console.log(idx)
+        $('#mainMD .inner .tabs_wrap .content>div').removeClass('on');
+        $('#mainMD .inner .tabs_wrap .content>div').eq(idx).addClass('on');
+
+        $('#mainMD .inner .tab_manu>li').removeClass('on');
+        $(this).addClass('on');
+
+        $('#mainMD .inner .content .slide').slick('slickGoTo', 0);
+
+    })
+
+    $('#mainMD .slide_arrow li:nth-child(1)').on('click', function () {
+        $('#mainMD .inner .content .slide').slick('slickPrev')
+
+    })
+
+    $('#mainMD .slide_arrow li:nth-child(2)').on('click', function () {
+        $('#mainMD .inner .content .slide').slick('slickNext')
+
+    })
+
+    $('#mainMD .slide_arrow button').on('click', function () {
+        $('#mainMD .slide_arrow li').removeClass('on')
+        $(this).parent().addClass('on');
+    });
+
 })
