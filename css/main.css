@@ -28,6 +28,12 @@
     background: #fff;
 
     z-index: 999;
+
+    transition: 0.5s;
+}
+
+#header.on {
+    top: -100px;
 }
 
 #header .inner {
@@ -104,7 +110,6 @@
 /* {mainVisual */
 #mainVisual .mainSlide {
     width: 1800px;
-    height: 100vh;
     margin: 0 auto;
     padding: 100px 0 0 0;
 }
@@ -142,10 +147,14 @@
     letter-spacing: 4px;
 }
 
+#mainVisual {
+    position: relative;
+}
+
 #mainVisual .main_dots {
     position: absolute;
-    bottom: 59px;
-    right: 60px;
+    bottom: 0;
+    right: 51.5px;
     /* transform: translate(-50%, -100%); */
     display: flex;
     justify-content: space-between;
@@ -209,6 +218,8 @@
     margin: 0 auto;
 
     overflow: hidden;
+
+    position: relative;
 }
 
 #mainBestArt .inner .intro {
@@ -255,7 +266,7 @@
 }
 
 #mainBestArt .inner .artslide {
-    margin: 0 -15px;
+    margin: 0 -15px 15px -15px;
 }
 
 #mainBestArt .inner .artslide figure {
@@ -272,4 +283,80 @@
 #mainBestArt .inner .artslide figure a {
     display: block;
     font-size: 25px;
+}
+
+#mainBestArt .inner .artslide figure .txt {
+    margin: 0 0 30px 0;
+}
+
+#mainBestArt .inner .artslide figure .desc {
+    margin: 0 0 30px 0;
+}
+
+#mainBestArt .inner .artslide figure .desc span {
+    color: #c9ab81;
+}
+
+#mainBestArt .inner .artslide figure .desc p {
+    color: #888888;
+}
+
+#mainBestArt .inner .artslide figure .cost {
+    font-size: 20px;
+}
+
+#mainBestArt .inner .artslide figure .cost strong {
+    font-size: 36px;
+}
+
+#mainBestArt .inner .artslide .slick-dots {
+    position: absolute;
+    bottom: -10px;
+    left: 48%;
+    font-size: 0;
+
+    overflow: visible;
+}
+
+#mainBestArt .inner .artslide .slick-dots>li {
+    display: inline-block;
+    margin: 0px 10px;
+    width: 7px;
+    height: 7px;
+    background: #666;
+    border-radius: 50%;
+
+
+}
+
+#mainBestArt .inner .artslide .slick-dots>li button {
+    display: none;
+}
+
+#mainBestArt .inner .artslide .slick-dots>li.slick-active {
+    background: #333;
+    transform: scale(1.2);
+
+}
+
+#mainBestArt .slick-arrow {
+    position: absolute;
+    top: 50%;
+}
+
+#mainBestArt .slick-prev {
+    left: 0;
+    transform: translate(0, -50%);
+}
+
+#mainBestArt {
+    position: relative;
+}
+
+#mainBestArt .slideArrow i:nth-child(1) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: 0 0 0 -800px;
+    font-size: 100px;
 }

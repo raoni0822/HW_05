@@ -1,4 +1,16 @@
 $(function () {
+    $(window).on('wheel', function (event) {
+        console.log(event.originalEvent.deltaY)
+        var wdY = event.originalEvent.deltaY; // 100, -100
+        // if (wdY > 0) {
+        //     $('#header').addClass('on')
+        // } else {
+        //     $('#header').removeClass('on')
+        // }
+        wdY > 0 ? $('#header').addClass('on') : $('#header').removeClass('on')
+    })
+
+
     $('.mainSlide').slick({
         autoplay: true,
         autoplaySpeed: 3000,
@@ -18,6 +30,7 @@ $(function () {
     })
 
     $('.artslide').slick({
+        dots: true,
         autoplay: false,
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -25,5 +38,10 @@ $(function () {
         slidesToScroll: 1,
         swipeToSlide: true,
         infinite: false,
+    });
+
+
+    $('#mainBestArt .slideArrow i:nth-child(1)').on('click', function () {
+        $('.artslide').slick('slickPrev')
     })
 })
