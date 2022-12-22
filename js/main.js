@@ -1,6 +1,6 @@
 $(function () {
     $(window).on('wheel', function (event) {
-        console.log(event.originalEvent.deltaY)
+        // console.log(event.originalEvent.deltaY)
         var wdY = event.originalEvent.deltaY; // 100, -100
         // if (wdY > 0) {
         //     $('#header').addClass('on')
@@ -8,6 +8,28 @@ $(function () {
         //     $('#header').removeClass('on')
         // }
         wdY > 0 ? $('#header').addClass('on') : $('#header').removeClass('on')
+    })
+
+    $(window).on('scroll', function () {
+        var scrValue = $(window).scrollTop(); // 스크롤 값을 구한다.
+        console.log(scrValue)
+        if (scrValue > 300) {
+            $('#element').fadeIn();
+        } else {
+            $('#element').fadeOut();
+        }
+        // scrValue > 300 ? $('#toTop').fadeIn() : $('#toTop').fadeOut();
+
+        // scrValue === 0 ? $('#header').removeClass('on') : $('#header').addClass('on')
+
+        if (scrValue === 0) $('#header').removeClass('on')
+
+
+
+    })
+
+    $('#element').on('click', function () {
+        $('html,body').animate({ scrollTop: 0 }, 800)
     })
 
 
