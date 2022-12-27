@@ -188,6 +188,7 @@
     width: 200px;
     color: #888;
     opacity: 0.7;
+    cursor: pointer;
 }
 
 #mainVisual .main_dots li~li::after {
